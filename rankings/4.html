@@ -1,0 +1,112 @@
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>4 绿灯侠 超级英雄排行榜</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type='text/javascript' src='../js/js.js'></script>
+	</head>
+	<body>
+		<div id="banner">
+			<div id="logo">
+				<div>核心角色</div>
+			</div>
+			<div id="nav">
+				<ul>
+					<li><a href="./Jinx.html">金克斯</a></li>
+					<li><a href="./Vi.html">蔚</a></li>
+					<li><a href="./Jayce.html">杰斯</a></li>
+					<li><a href="./Viktor.html">维克托</a></li>
+					<li><a href="./Caitlyn.html">凯特琳</a></li>
+					<li><a href="./5.html">梅尔</a></li>
+					<li><a href="./4.html">范德尔</a></li>
+					<li><a href="./3.html">希尔科</a></li>
+					<li><a href="./Ekko.html">艾克</a></li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
+		</div>
+		<div id="main">
+			<div class="box-wrapper">
+				<div class="content">
+					<h1>4 绿灯侠</h1>
+					<div class="description">
+						<p>可以利用手上的戒指发挥不可思议的力量，它是按照人的意志力来增强自己的力量。虽然知名度不及其它超级英雄，但战斗力绝对不容小看。</p>
+					</div>
+					<div class="pic">
+						<p><img src="../images/41.jpg"></p>
+						<p><img src="../images/42.jpg"></p>
+						<p><img src="../images/43.jpg"></p>
+						<p><img src="../images/44.jpg"></p>
+					</div>
+				</div>
+				<div class="footer">
+					<div class="copy-right">
+
+						<span id="sitetime">载入运行时间...</span>
+						<script>
+							function siteTime() {
+								var seconds = 1000;
+								var minutes = seconds * 60;
+								var hours = minutes * 60;
+								var days = hours * 24;
+								var years = days * 365;
+								var today = new Date();
+								var startYear = "2021";
+								var startMonth = "1";
+								var startDate = "1";
+								var startHour = "0";
+								var startMinute = "0";
+								var startSecond = "0";
+								var todayYear = today.getFullYear();
+								var todayMonth = today.getMonth() + 1;
+								var todayDate = today.getDate();
+								var todayHour = today.getHours();
+								var todayMinute = today.getMinutes();
+								var todaySecond = today.getSeconds();
+								var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+								var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+								var diff = t2 - t1;
+								var diffYears = Math.floor(diff / years);
+								var diffDays = Math.floor((diff / days) - diffYears * 365);
+								var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+								var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+									minutes);
+								var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+									diffMinutes * minutes) / seconds);
+
+								document.getElementById("sitetime").innerHTML = "小破站已运行 " + diffDays + " 天 " + diffHours +
+									" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+							}
+							setInterval(siteTime, 1000);
+						</script>
+					</div>
+
+					<div class="bandge">
+						<p>
+							<a href="https://tianwen42.top/" target="_blank" title="关于阳林" alt="about">
+								<img src="https://img.shields.io/badge/Dsigned%20BY-Yanglin-green" /></a>
+							<a href="https://github.com/" target="_blank" title="还有头发，还能学！">
+								<img
+									src="https://badgen.net/github/status/facebook/react/master/ci/circleci:%20yarn_test"></a>
+							<a href="#">
+								<img src="https://badgen.net/badge/icon/chrome?icon=chrome&label"></a>
+							<a href="https://www.aliyun.com/" target="_blank" title="部署于Aliyun,CDN采用Jsdelivr">
+								<img src="https://img.shields.io/badge/host-Aliyun-blue?logo=Alibaba%20Cloud" /></a>
+							<a href="https://cdn.tianwen42.top//CDN/intro/wechat.jpg" target="_blank" title="wechat">
+								<img src="https://img.shields.io/badge/kuper42-red.svg?style=social&logo=wechat" /></a>
+							<a href="https://cdn.tianwen42.top//CDN/intro/qq.jpg" target="_blank" title="QQ">
+								<img src="https://img.shields.io/badge/QQ-Yang-blue.svg?style=social" /></a>
+							<a href="#" target="_blank" title="请杯奶茶？">
+								<img src="https://img.shields.io/badge/Alipay-grey?logo=Alipay" /></a>
+						</p>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+	</body>
+</html>
