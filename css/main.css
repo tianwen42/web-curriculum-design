@@ -1,0 +1,224 @@
+/* CSS Document */
+/*设置背景*/
+body{
+    overflow: hidden;
+	background: url(../images/bg.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	z-index=-2;
+}
+/*字体指定*/
+h1,h2{
+	font-family: "SourceHanSerifCNB"!important;
+    text-shadow: 0.02em 0.02em 0.05em #999999 !important;
+}
+*:not([class*="ico"]):not(i){
+    font-family: "SourceHanSerifCN";
+    text-shadow: 0.02em 0.02em 0.05em #999999 !important;
+}
+
+/*入场动画*/
+div .enter{
+	position:absolute;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+	z-index: 0;
+}
+
+div .enterimg{
+	position:absolute;
+	background: url(../images/loading.jpg);
+	background-size: cover;
+	background-attachment: fixed;
+	background-position: center;
+	height: 100%;
+	width: 100%;
+	vertical-align: center;
+}
+
+div .enter_logo{
+	background: url(../images/logo-big.png)  no-repeat;
+	background-position:center;
+	background-size:contain;
+	position:absolute;
+	left:25%;
+	top:30%;
+	width:15%;
+	height:20%;
+}
+
+div .enter_word{
+	display: none;
+	position:absolute;
+	left:45%;
+	top:30%;
+	width:35%;
+	height:20%;
+	text-align: left;
+}
+
+/*点赞按钮*/
+#likeit{
+	text-align: center;
+	width: 7em;
+}
+
+/*主页面*/
+.main-intro{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 100%;
+	font-weight: normal;
+	flex-direction: column;
+}
+.main-intro h1{
+	color: #FFFFFF;
+	font-size: 3.5em;
+	text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+	letter-spacing: 0.25em;
+}
+.main-bg h1{
+	letter-spacing: 0.05em;
+}
+.main-intro p{
+	color: #FFFFFF;
+	text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+	letter-spacing: 1px;
+}
+.main-intro a{
+	color: #000000;
+}
+.main-intro a:hover{
+	color: #000000;
+}
+
+p.paragraph{
+	text-indent:2em;
+}
+
+/*导航栏*/
+.head-bg{
+	position: fixed;
+	width: 100%;
+	height: 100px;
+	background: rgba(255,255,255,0.40);
+	transition: background 0.3s, height 0.3s;
+}
+.menu{
+	height: inherit;
+}
+.menu a #logo{
+    display: inline;
+}
+
+.logo{
+	display: flex;
+    justify-content: center;
+    align-items: center;
+	float: left;
+	height: inherit;
+}
+
+.menu li, .menu ul{
+	float: left;
+	list-style: none;
+}
+.menu a{
+	display: block;
+	color: #000000;
+	line-height: 100px;
+	transition: line-height 0.3s, color 0.3s;
+}
+.menu a:hover{
+	cursor: pointer;
+	text-shadow: 0 0 1px rgba(0,0,0,.05), 0 1px 2px rgba(0,0,0,.3);
+}
+.menu-roll{
+	box-shadow: 0 0 32px rgba(0,0,0,0.15);
+	background: #FFFFFF;
+	height: 60px;
+	z-index: 1;
+}
+.menu-roll a{
+	color: #000000;
+	line-height: 60px;
+	transition: line-height 0.3s, color 0.3s;
+}
+.main-bg{
+	background: #FFFFFF;
+	margin-bottom: 100px;
+}
+.main-bg img{
+	max-height: 500px;
+}
+
+/*具体内容介绍*/
+.text1{
+	padding-top: 30px;
+	padding-bottom: 10px;
+}
+
+.text2{
+	padding-bottom: 30px;
+}
+.text2 img{
+	border-radius: 15px;
+	transition: transform 0.3s;
+}
+.text2 img:hover{
+	transform: scale(1.05,1.05);
+}
+.text2 h1{
+	text-align: center;
+	padding: 20px 0px;
+}
+.text2 .col-m-4{
+	margin-bottom: 15px;
+}
+.text2 .more{
+	text-align: center;
+	margin-top: 30px;
+}
+
+/*页脚*/
+.footer{
+	text-align: center;
+	background: #FFFFFF;
+	padding: 10px 0px;
+}
+/*响应式*/
+@media screen and (max-width: 900px){
+	.head-bg .logo{
+		margin: 0 auto;
+		float: none;
+	}
+	.main-intro h1{
+		font-size: 24px;
+		text-align: center;
+		margin-bottom: 10px;
+	}
+	.main-intro p{
+		text-align: center;
+		padding: 0px 20px;
+	}
+	.head-bg li{
+		height: 0px;
+		overflow: hidden;
+		transition: height 0.3s;
+		background: #FFFFFF;
+    	width: calc(100% + 40px);
+		margin-left: -20px;
+    	margin-top: -1px;
+	}
+	.head-bg ul{
+		float: none;
+	}
+	.head-bg a{
+		line-height: 60px;
+		color: #000000;
+	}
+}
+

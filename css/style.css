@@ -3,6 +3,7 @@
 	margin: 0;
 }
 
+
 body {
 	min-height: 900px;
 	position: relative;
@@ -10,10 +11,11 @@ body {
 	font-family: "微软雅黑";
 	color: #666;
 	height: 100%;
-	background: url(../images/background.jpg) no-repeat center top fixed;
+	background: url(../images/background.jpg) no-repeat;
 	background-size: cover;
-	cursor:url(../images/icon/cursor_10.cur),auto;
-	
+	cursor: url(../images/icon/cursor_10.cur), auto;
+	background-attachment:fixed;
+
 }
 
 h3 {
@@ -52,9 +54,9 @@ li {
 	width: 100%;
 }
 
-#go {
-	width: 500px;
-	height: 60px;
+.btn {
+  width: 250px;
+  height: 50px;
 	line-height: 60px;
 	position: absolute;
 	font-size: 30px;
@@ -62,17 +64,69 @@ li {
 	color: #fff;
 	font-weight: bold;
 	left: 50%;
-	margin-left: -250px;
+	margin-left: -400px;
 	top: 50%;
 	margin-top: -30px;
 }
 
-#go a {
+
+
+
+.btn a {
 	color: #fff;
 }
 
-#go a:hover {
-	font-size: 36px;
+.btn label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  line-height: 50px;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  background-color: rgb(51, 51, 51);
+	color: aquamarine;
+	}
+
+.btn::before {
+  content: '';
+  position: absolute;
+  left: -2px;
+  top: -2px;
+  width: 0px;
+  height: 0;
+  z-index: 0;
+  background-color: brown;
+  transition: width .5s,height .5s;
+}
+
+.btn::after {
+  content: '';
+  position: absolute;
+  right: -2px;
+  bottom: -2px;
+  width: 0;
+  height: 0;
+  z-index: 0;
+  background-color: brown;
+  transition: width .5s,height .5s;
+
+  /* width: calc(100% + 4px);
+  height: calc(100% + 4px); */
+}
+
+.btn:hover {
+  color: brown;
+}
+
+.btn:hover::before {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
+}
+
+.btn:hover::after {
+  width: calc(100% + 4px);
+  height: calc(100% + 4px);
 }
 
 #banner {
@@ -112,13 +166,15 @@ li {
 #nav li a {
 	display: block;
 	margin-right: 100px;
-	height: 80px;
+	height: 70px;
+	width: 70px;
 	background: #fff;
 	color: #777a74;
 	text-align: center;
-	line-height: 80px;
+	line-height: 70px;
 	font-weight: bold;
 	font-size: 16px;
+	 border-radius: 90px;
 }
 
 .pic img {
@@ -160,4 +216,35 @@ li {
 	text-align: center;
 	margin-bottom: 0px;
 }
-.bandge{margin-top: 10px;}
+
+.bandge {
+	margin-top: 10px;
+}
+
+/*测试----------------------*/
+
+.text2{
+	padding-bottom: 30px;
+}
+.text2 img{
+	border-radius: 15px;
+	transition: transform 0.3s;
+}
+.text2 img:hover{
+	transform: scale(1.05,1.05);
+}
+.text2 h1{
+	text-align: center;
+	padding: 20px 0px;
+}
+
+.text2 .col-m-4{
+	margin-bottom: 10px;
+}
+.text2 .col-m-6{
+	margin-bottom: 10px;
+}
+.text2 .more{
+	text-align: center;
+	margin-top: 30px;
+}
