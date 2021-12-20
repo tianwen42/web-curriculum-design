@@ -34,84 +34,62 @@
 		<div id="main">
 			<div class="box-wrapper">
 				<div class="content">
-					<h1>艾克</h1>
+					
 					<div class="description">
 						<p>艾克是一名来自祖安不良街区的奇才。他可以操纵时间，从而让任何处境都变得对自己有利。通过使用他自己的发明——Z型驱动——他可以对现实的其它分支的可能性进行探索。在不断试验多维或然率的同时，艾克还将他的时间花费在与祖安的其他走失儿童一起撒野上。尽管他酷爱这种自由自在，但只要他的朋友们遇到了威胁，他就会不顾一切地去保护他们。对于毫不知情的观测者来说，艾克总是在一次又一次且轻而易举地完成着不可能的事情。
 						</p>
-						<div>“我的装置在运行失常的时候最好用…...也就是大部分时候都好用。”——艾克</div>
+						<div class="saying">“我的装置在运行失常的时候最好用…...也就是大部分时候都好用。”——艾克</div>
 					</div>
-					<div class="pic">
-						<p><img src="../images/ekko.jpg"></p>
-						<p><img src="../images/ekko2.png"></p>
-						<p><img src="../images/ekko3.jpg"></p>
-						<p><img src="../images/ekko4.jpg"></p>
-						<p><img src="../images/ekko5.jpg"></p>
+					<div class="main-bg text2" id="3">
+					<h1>艾克</h1>
+					<div class="row thin">
+						<div class="col-m-6">
+							<img class="zoomimg" src="../images/ekko.jpg" alt="vi">
+						</div>
+						<div class="col-m-6">
+							<img class="zoomimg" src="../images/ekko2.png" alt="vi">
+						</div>
+						<div class="col-m-4">
+							<img class="zoomimg" src="../images/ekko3.jpg" alt="vi">
+						</div>
+						<div class="col-m-4">
+							<img class="zoomimg" src="../images/ekko4.jpg" alt="vi">
+						</div>
+						<div class="col-m-4">
+							<img class="zoomimg" src="../images/ekko5.jpg" alt="vi">
+						</div>
 					</div>
+				</div>
 				</div>
 			</div>
 <div class="footer">
-				<div class="copy-right">
+			<div class="copy-right">
+				<span id="sitetime">载入运行时间...</span>
+				<script>
+					setInterval(siteTime, 1000);
+				</script>
+			</div>
 
-					<span id="sitetime">载入运行时间...</span>
-					<script>
-						function siteTime() {
-							var seconds = 1000;
-							var minutes = seconds * 60;
-							var hours = minutes * 60;
-							var days = hours * 24;
-							var years = days * 365;
-							var today = new Date();
-							var startYear = "2021";
-							var startMonth = "1";
-							var startDate = "1";
-							var startHour = "0";
-							var startMinute = "0";
-							var startSecond = "0";
-							var todayYear = today.getFullYear();
-							var todayMonth = today.getMonth() + 1;
-							var todayDate = today.getDate();
-							var todayHour = today.getHours();
-							var todayMinute = today.getMinutes();
-							var todaySecond = today.getSeconds();
-							var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-							var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-							var diff = t2 - t1;
-							var diffYears = Math.floor(diff / years);
-							var diffDays = Math.floor((diff / days) - diffYears * 365);
-							var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-							var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-								minutes);
-							var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-								diffMinutes * minutes) / seconds);
-
-							document.getElementById("sitetime").innerHTML = "小破站已运行 " + diffDays + " 天 " + diffHours +
-								" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
-						}
-						setInterval(siteTime, 1000);
-					</script>
-				</div>
-
-				<div class="bandge">
-					<p>
-						<a href="https://tianwen42.top/" target="_blank" title="关于阳林" alt="about">
-							<img src="https://img.shields.io/badge/Dsigned%20BY-Yanglin-green" /></a>
-						<a href="https://github.com/" target="_blank" title="还有头发，还能学！">
-							<img
-								src="https://badgen.net/github/status/facebook/react/master/ci/circleci:%20yarn_test"></a>
-						<a href="#">
-							<img src="https://badgen.net/badge/icon/chrome?icon=chrome&label"></a>
-						<a href="https://www.aliyun.com/" target="_blank" title="部署于Aliyun,CDN采用Jsdelivr">
-							<img src="https://img.shields.io/badge/host-Aliyun-blue?logo=Alibaba%20Cloud" /></a>
-						<a href="https://cdn.tianwen42.top//CDN/intro/wechat.jpg" target="_blank" title="wechat">
-							<img src="https://img.shields.io/badge/kuper42-red.svg?style=social&logo=wechat" /></a>
-						<a href="https://cdn.tianwen42.top//CDN/intro/qq.jpg" target="_blank" title="QQ">
-							<img src="https://img.shields.io/badge/QQ-Yang-blue.svg?style=social" /></a>
-						<a href="#" target="_blank" title="请杯奶茶？">
-							<img src="https://img.shields.io/badge/Alipay-grey?logo=Alipay" /></a>
-					</p>
-				</div>
+			<div class="bandge">
+				<p>
+					<a href="https://tianwen42.top/" target="_blank" title="关于阳林" alt="about">
+						<img src="https://img.shields.io/badge/Dsigned%20BY-Yanglin-green" /></a>
+					<a href="https://github.com/" target="_blank" title="还有头发，还能学！">
+						<img src="https://badgen.net/github/status/facebook/react/master/ci/circleci:%20yarn_test"></a>
+					<a href="#">
+						<img src="https://badgen.net/badge/icon/chrome?icon=chrome&label"></a>
+					<a href="https://www.aliyun.com/" target="_blank" title="部署于Aliyun,CDN采用Jsdelivr">
+						<img src="https://img.shields.io/badge/host-Aliyun-blue?logo=Alibaba%20Cloud" /></a>
+					<a href="https://cdn.tianwen42.top//CDN/intro/wechat.jpg" target="_blank" title="wechat">
+						<img src="https://img.shields.io/badge/kuper42-red.svg?style=social&logo=wechat" /></a>
+					<a href="https://cdn.tianwen42.top//CDN/intro/qq.jpg" target="_blank" title="QQ">
+						<img src="https://img.shields.io/badge/QQ-Yang-blue.svg?style=social" /></a>
+					<a href="#" target="_blank" title="请杯奶茶？">
+						<img src="https://img.shields.io/badge/Alipay-grey?logo=Alipay" /></a>
+				</p>
 			</div>
 		</div>
-		</div>
+	</div>
+	<script>clikOn()</script>
 	</body>
 </html>
