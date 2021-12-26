@@ -1345,6 +1345,7 @@ img[bk-image=active]{
 }
 
 .bk-image img{
+	border-radius: 20px;
     top: 0;
     left: 0;
     right: 0;
