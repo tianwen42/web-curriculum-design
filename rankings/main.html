@@ -36,6 +36,7 @@
 			xmlhttp.onreadystatechange = function() {
 				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
 					document.getElementsByClassName("box-wrapper")[0].innerHTML = xmlhttp.responseText;
+					ks.image(".zoomimg");
 				}
 			}
 			xmlhttp.open("GET", ID+".html", true);
