@@ -41,7 +41,7 @@
 			}
 			xmlhttp.open("GET", ID+".html", true);
 			xmlhttp.send();
-			
+
 		}
 	</script>
 
@@ -153,7 +153,7 @@
 			fixed: true, //是否附着页面底部，否为false
 			autoplay: true, //是否自动播放，否为false,移动端不能生效
 			volume: 0.6, //初始音量（0~1）
-			lrcType: 1, //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+			lrcType: 3, //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
 			mutex: true, //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
 			order: 'random', //音频循环顺序（'list'：顺序, 'random'：随机）
 			preload: 'auto', //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
@@ -164,7 +164,7 @@
 				artist: '陈奕迅', //歌曲作者
 				url: '../music/孤勇者 - 陈奕迅.mp3', //歌曲源文件地址
 				cover: '../music/cover.jpg', //歌曲封面地址
-				lrc: 'lrc.lrc', //歌曲的歌词文件
+				lrc: '../music/孤勇者.lrc', //歌曲的歌词文件
 				theme: '#eeeeee' //主题颜色（优先）
 			}]
 		});
