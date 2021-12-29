@@ -1,185 +1,267 @@
 <html>
 
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-	<title>金克丝</title>
-	<meta name="keywords" content="" />
-	<meta name="description" content="" />
-	<link href="../css/style.css" rel="stylesheet" type="text/css" />
-	<link href="../css/kico.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="../js/jquery.min.js"></script>
-	<script type="text/javascript" src="../js/js.js"></script>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+		<title>金克丝</title>
+		<meta name="keywords" content="" />
+		<meta name="description" content="" />
+		<link href="../css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../css/kico.css" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../js/jquery.min.js"></script>
+		<script type="text/javascript" src="../js/js.js"></script>
 
-	<link rel="stylesheet" href="../js/APlayer.min.css">    <!-- Aplayer组件 -->
-	<script src="../js/kico.js"></script>    <!-- kico框架 -->
-	<!-- 图片点击 -->
-	<script>
-		$(document).ready(function () {
-			ks.image(".zoomimg");
-		});
-	</script>
-	<!-- Ajax -->
-	<script>
-		function loadXMLDoc(tag) {
-			//我的跨域请求YANGLIN
-			var url = "https://cdn.tianwen42.top/LOL/rankings";
-			var xmlhttp;
-			var ID=tag.id;
-			console.log(tag.id);
-			if (window.XMLHttpRequest) {
-				//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-				xmlhttp = new XMLHttpRequest();
-			} else {
-				// IE6, IE5 浏览器执行代码
-				xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
-			}
-			xmlhttp.onreadystatechange = function() {
-				if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
-					document.getElementsByClassName("box-wrapper")[0].innerHTML = xmlhttp.responseText;
-					ks.image(".zoomimg");
+		<link rel="stylesheet" href="../js/APlayer.min.css"> <!-- Aplayer组件 -->
+		<script src="../js/kico.js"></script> <!-- kico框架 -->
+		<!-- 图片点击 -->
+		<script>
+			$(document).ready(function() {
+				ks.image(".zoomimg");
+			});
+		</script>
+		<!-- Ajax -->
+		<script>
+			function loadXMLDoc(tag) {
+				//我的跨域请求YANGLIN
+				var url = "https://cdn.tianwen42.top/LOL/rankings";
+				var xmlhttp;
+				var ID = tag.id;
+				console.log(tag.id);
+				if (window.XMLHttpRequest) {
+					//  IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
+					xmlhttp = new XMLHttpRequest();
+				} else {
+					// IE6, IE5 浏览器执行代码
+					xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
 				}
+				xmlhttp.onreadystatechange = function() {
+					if (xmlhttp.readyState == 4 && xmlhttp.status == 200) {
+						document.getElementsByClassName("box-wrapper")[0].innerHTML = xmlhttp.responseText;
+						ks.image(".zoomimg");
+					}
+				}
+				xmlhttp.open("GET", ID + ".html", true);
+				xmlhttp.send();
+
 			}
-			xmlhttp.open("GET", ID+".html", true);
-			xmlhttp.send();
+		</script>
 
-		}
-	</script>
+	</head>
 
-</head>
-
-<body>
-	<h1>
-		预告
-	</h1>
-	<div class="MV">
-		<video src="../video/MV2.mp4" controls></video>
-	</div>
-
-	<div id="banner">
-		<div id="logo">
-			<div>核心角色</div>
+	<body>
+		<h1>
+			预告
+		</h1>
+		<div class="MV">
+			<video src="../video/MV2.mp4" controls></video>
 		</div>
-		<div id="nav">
-			<ul>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Jinx">金克斯</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Vi">蔚</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Jayce">杰斯</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Viktor">维克托</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Caitlyn">凯特琳</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="meyer">梅尔</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Caudal">范德尔</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Hilco">希尔科</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Ekko">艾克</a></li>
-				<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Ryze">瑞兹</a></li>
-				<div class="clearfix"></div>
-			</ul>
+
+		<div id="banner">
+			<div id="logo">
+				<div>核心角色</div>
+			</div>
+			<div id="nav">
+				<ul>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Jinx">金克斯</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Vi">蔚</a></li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Jayce">杰斯</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Viktor">维克托</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Caitlyn">凯特琳</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="meyer">梅尔</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Caudal">范德尔</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Hilco">希尔科</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Ekko">艾克</a>
+					</li>
+					<li class="be-tab-item"><a href="javascript:void(0)" onclick="loadXMLDoc(this)" id="Ryze">瑞兹</a>
+					</li>
+					<div class="clearfix"></div>
+				</ul>
+			</div>
 		</div>
-	</div>
 
-	<div id="main">
+		<div id="main">
 
 
-		<div class="box-wrapper">
-			<h1>金克丝</h1>
-			<div class="content">
+			<div class="box-wrapper">
+				<h1>金克丝</h1>
+				<div class="content">
 
-				<div class="description">
-					<p>
-						金克丝和蔚是一对复杂的恩怨姐妹。
-						她有着天才的头脑和狂躁的性格，由于过去的创伤，
-						金克丝的才华反而让她成为一个难以对付的顽童。
-					</p>
-					<div class="saying" style="text-align: center;font-size: large;">
-						<p>“我是个疯子，有医生开的证明” —— 金克丝</p>
+					<div class="description">
+						<p>
+							金克丝和蔚是一对复杂的恩怨姐妹。
+							她有着天才的头脑和狂躁的性格，由于过去的创伤，
+							金克丝的才华反而让她成为一个难以对付的顽童。
+						</p>
+						<div class="saying" style="text-align: center;font-size: large;">
+							<p>“我是个疯子，有医生开的证明” —— 金克丝</p>
+						</div>
+					</div>
+				</div>
+				<div class="main-bg text2" id="3">
+
+					<div class="row thin">
+						<div class="col-m-6">
+							<img class="zoomimg" src="../images/jincx.jpg" alt="金克丝" bk-image="active">
+						</div>
+						<div class="col-m-6">
+							<img class="zoomimg" src="../images/jincx2.jpg" alt="金克丝" bk-image="active">
+						</div>
+						<div class="col-m-6">
+							<img class="zoomimg" src="../images/jincx3.jpg" alt="金克丝" bk-image="active">
+						</div>
+						<div class="col-m-6">
+							<img class="zoomimg" src="../images/jincx4.jpg" alt="金克丝" bk-image="active">
+						</div>
 					</div>
 				</div>
 			</div>
-			<div class="main-bg text2" id="3">
+		</div>
+		<div class="other" style="min-height: 600px;">
+			<h1>双城的战争</h1>
+			<div class="moredetail"
+				style="width: 1000px;margin: 0 auto;text-align: center;font-size: large; background-color: #eee; border-radius: 25px;">
+				<div class="story-box" style="padding: 20px;">
+					<div class="story" style="font-size: 16px;">
+						双城之战故事发生地点，是皮尔特沃夫和祖安，简称皮城祖安。在三千多年前恕瑞玛帝国统治的时代，瓦祖安这座港口城市就兴起了，
+						成为了瓦洛兰大陆和恕瑞玛大陆之间的通道，自然是成为了贸易中心。随着恕瑞玛的覆灭，港口城市独立成为祖安，
+						一些家族迅速累积了财富。大概是在两百年前，祖安人决定使用炸药来开辟皮尔特运河，但施工失误导致的爆炸，
+						使得祖安这座城市一分为二，海水淹没了下城的很多地区。皮尔特沃夫这个名字的真正意义是，皮尔特运河之上，
+						商人家族建立了日之门，掌管了两个大陆之间的水陆运输，他们继续扩大自身的繁荣。皮尔特沃夫成为了祖安的上城，
+						文化、商业和科技高度发展。有光明的地方必定有阴影，祖安成为了牺牲的部分，底城不但环境恶劣充斥着帮派，
+						而且炼金男爵使用化学科技加强自己的控制能力。贫富悬殊、地位差异，成为了双子城的永恒矛盾，并且在近年越演越烈了，
+						甚至可能带来战争。
+					</div>
+				</div>
 
-				<div class="row thin">
-					<div class="col-m-6">
-						<img class="zoomimg" src="../images/jincx.jpg" alt="金克丝" bk-image="active">
+			</div>
+			<h1>海克斯水晶</h1>
+			<div class="moredetail"
+				style="width: 1000px;margin: 0 auto;text-align: center;font-size: large; background-color: #eee; border-radius: 25px;">
+				<div class="story-box" style="padding: 20px;">
+					<div class="story" style="font-size: 16px;">
+						《双城之战》的动画原名是“ARCANE”，最常见的翻译就是奥术，对应的就是海克斯水晶的力量，
+						海克斯水晶也是本片的核心。皮城的家族研发了一种新能源，名为海克斯水晶，价格非常昂贵。
+						海克斯水晶非常泛用，能够带来庞大的力量，自然是受到人们的觊觎。
+						即使是皮城人都不容易获得海克斯水晶，更别说祖安人了。一个十分仇视皮城、
+						脸上毁容的新角色希尔科，他通过特殊手段弄到了一些海克斯水晶。希尔科认为上城夺走了一切，
+						底城没有任何希望，他一直鼓动祖安人与皮城人作对。希尔科可能和化学男爵有关，
+						后者算是祖安的统治者，拥有很强的势力。从目前的情报来看，希尔科打算用海克斯水晶制造一些武器
+						，或者强化自己的力量，利用海克斯水晶改造人体。金克丝则是偷走了海克斯水晶，或许不止一颗。
+						希尔科自然是非常暴怒，他通过各种手段找到了金克丝，并且抓捕了金克丝。希尔科也懂得生化科技，
+						他的手下有一个女人明显是强化人，还和蔚展开了对拼。金克丝可能被希尔科进行了人体实验的改造，
+						才变成了现在的疯子。与此同时，杰斯手里也获得了海克斯水晶，而在研究中造成了力量失控的情况。
 					</div>
-					<div class="col-m-6">
-						<img class="zoomimg" src="../images/jincx2.jpg" alt="金克丝" bk-image="active">
+				</div>
+
+			</div>
+			<h1>双城的战争</h1>
+			<div class="moredetail"
+				style="width: 1000px;margin: 0 auto;text-align: center;font-size: large; background-color: #eee; border-radius: 25px;">
+				<div class="story-box" style="padding: 20px;">
+					<div class="story" style="font-size: 16px;">
+						双城之战故事发生地点，是皮尔特沃夫和祖安，简称皮城祖安。在三千多年前恕瑞玛帝国统治的时代，瓦祖安这座港口城市就兴起了，
+						成为了瓦洛兰大陆和恕瑞玛大陆之间的通道，自然是成为了贸易中心。随着恕瑞玛的覆灭，港口城市独立成为祖安，
+						一些家族迅速累积了财富。大概是在两百年前，祖安人决定使用炸药来开辟皮尔特运河，但施工失误导致的爆炸，
+						使得祖安这座城市一分为二，海水淹没了下城的很多地区。皮尔特沃夫这个名字的真正意义是，皮尔特运河之上，
+						商人家族建立了日之门，掌管了两个大陆之间的水陆运输，他们继续扩大自身的繁荣。皮尔特沃夫成为了祖安的上城，
+						文化、商业和科技高度发展。有光明的地方必定有阴影，祖安成为了牺牲的部分，底城不但环境恶劣充斥着帮派，
+						而且炼金男爵使用化学科技加强自己的控制能力。贫富悬殊、地位差异，成为了双子城的永恒矛盾，并且在近年越演越烈了，
+						甚至可能带来战争。
 					</div>
-					<div class="col-m-6">
-						<img class="zoomimg" src="../images/jincx3.jpg" alt="金克丝" bk-image="active">
-					</div>
-					<div class="col-m-6">
-						<img class="zoomimg" src="../images/jincx4.jpg" alt="金克丝" bk-image="active">
+				</div>
+
+			</div>
+			<h1>双城的战争</h1>
+			<div class="moredetail"
+				style="width: 1000px;margin: 0 auto;text-align: center;font-size: large; background-color: #eee; border-radius: 25px;">
+				<div class="story-box" style="padding: 20px;">
+					<div class="story" style="font-size: 16px;">
+						双城之战故事发生地点，是皮尔特沃夫和祖安，简称皮城祖安。在三千多年前恕瑞玛帝国统治的时代，瓦祖安这座港口城市就兴起了，
+						成为了瓦洛兰大陆和恕瑞玛大陆之间的通道，自然是成为了贸易中心。随着恕瑞玛的覆灭，港口城市独立成为祖安，
+						一些家族迅速累积了财富。大概是在两百年前，祖安人决定使用炸药来开辟皮尔特运河，但施工失误导致的爆炸，
+						使得祖安这座城市一分为二，海水淹没了下城的很多地区。皮尔特沃夫这个名字的真正意义是，皮尔特运河之上，
+						商人家族建立了日之门，掌管了两个大陆之间的水陆运输，他们继续扩大自身的繁荣。皮尔特沃夫成为了祖安的上城，
+						文化、商业和科技高度发展。有光明的地方必定有阴影，祖安成为了牺牲的部分，底城不但环境恶劣充斥着帮派，
+						而且炼金男爵使用化学科技加强自己的控制能力。贫富悬殊、地位差异，成为了双子城的永恒矛盾，并且在近年越演越烈了，
+						甚至可能带来战争。
 					</div>
 				</div>
 			</div>
+
+
 		</div>
-	</div>
+		<div class="footer">
+			<div class="copy-right">
 
-	<div class="footer">
-		<div class="copy-right">
+				<span id="sitetime">载入运行时间...</span>
+				<script>
+					setInterval(siteTime, 1000);
+				</script>
+			</div>
 
-			<span id="sitetime">载入运行时间...</span>
-			<script>
-				setInterval(siteTime, 1000);
-			</script>
+			<div class="bandge">
+				<p>
+					<a href="https://tianwen42.top/" target="_blank" title="关于阳林" alt="about">
+						<img src="https://img.shields.io/badge/Dsigned%20BY-Yanglin-green" /></a>
+					<a href="https://github.com/" target="_blank" title="还有头发，还能学！">
+						<img src="https://img.shields.io/badge/github-black?logo=github"></a>
+					<a href="javascript:void(0);">
+						<img src="https://badgen.net/badge/icon/chrome?icon=chrome&label"></a>
+					<a href="https://www.aliyun.com/" target="_blank" title="部署于Aliyun,CDN采用Jsdelivr">
+						<img src="https://img.shields.io/badge/host-Aliyun-blue?logo=Alibaba%20Cloud" /></a>
+					<a href="https://cdn.tianwen42.top//CDN/intro/wechat.jpg" target="_blank" title="wechat">
+						<img src="https://img.shields.io/badge/kuper42-red.svg?style=social&logo=wechat" /></a>
+					<a href="https://cdn.tianwen42.top//CDN/intro/qq.jpg" target="_blank" title="QQ">
+						<img src="https://img.shields.io/badge/QQ-Yang-blue.svg?style=social" /></a>
+					<a href="https://cdn.tianwen42.top//CDN/intro/alipay.jpg" target="_blank" title="请杯奶茶？">
+						<img src="https://img.shields.io/badge/Alipay-white?logo=Alipay" /></a>
+				</p>
+			</div>
 		</div>
+		<script>
+			clikOn()
+		</script>
+		<div id="aplayer"></div>
+		<script src="../js/APlayer.min.js"></script>
+		<script>
+			const ap = new APlayer({
+				container: document.getElementById('aplayer'),
+				fixed: true, //是否附着页面底部，否为false
+				autoplay: true, //是否自动播放，否为false,移动端不能生效
+				volume: 0.6, //初始音量（0~1）
+				lrcType: 3, //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
+				mutex: true, //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
+				order: 'random', //音频循环顺序（'list'：顺序, 'random'：随机）
+				preload: 'auto', //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
+				listFolded: false, //列表默认折叠，开启为true
+				theme: '#ee8243', //主题颜色
+				audio: [{
+					name: '孤勇者 - 陈奕迅', //歌曲名称
+					artist: '陈奕迅', //歌曲作者
+					url: '../music/孤勇者 - 陈奕迅.mp3', //歌曲源文件地址
+					cover: '../music/cover.jpg', //歌曲封面地址
+					lrc: '../music/孤勇者.lrc', //歌曲的歌词文件
+					theme: '#eeeeee' //主题颜色（优先）
+				}]
+			});
+		</script>
+		<div class="container" style="height:112.8px;"><canvas class="illo" width="120" height="120"
+				style="max-width:100px;max-height:112.8px;touch-action:none;"></canvas>
 
-		<div class="bandge">
-			<p>
-				<a href="https://tianwen42.top/" target="_blank" title="关于阳林" alt="about">
-					<img src="https://img.shields.io/badge/Dsigned%20BY-Yanglin-green" /></a>
-				<a href="https://github.com/" target="_blank" title="还有头发，还能学！">
-					<img src="https://img.shields.io/badge/github-black?logo=github"></a>
-				<a href="javascript:void(0);">
-					<img src="https://badgen.net/badge/icon/chrome?icon=chrome&label"></a>
-				<a href="https://www.aliyun.com/" target="_blank" title="部署于Aliyun,CDN采用Jsdelivr">
-					<img src="https://img.shields.io/badge/host-Aliyun-blue?logo=Alibaba%20Cloud" /></a>
-				<a href="https://cdn.tianwen42.top//CDN/intro/wechat.jpg" target="_blank" title="wechat">
-					<img src="https://img.shields.io/badge/kuper42-red.svg?style=social&logo=wechat" /></a>
-				<a href="https://cdn.tianwen42.top//CDN/intro/qq.jpg" target="_blank" title="QQ">
-					<img src="https://img.shields.io/badge/QQ-Yang-blue.svg?style=social" /></a>
-				<a href="https://cdn.tianwen42.top//CDN/intro/alipay.jpg" target="_blank" title="请杯奶茶？">
-					<img src="https://img.shields.io/badge/Alipay-white?logo=Alipay" /></a>
-			</p>
+			<script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/zdog.dist.js"></script>
+			<script id="rendered-js" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople.js"></script>
 		</div>
-	</div>
-	<script>
-		clikOn()
-	</script>
-	<div id="aplayer"></div>
-	<script src="../js/APlayer.min.js"></script>
-	<script>
-		const ap = new APlayer({
-			container: document.getElementById('aplayer'),
-			fixed: true, //是否附着页面底部，否为false
-			autoplay: true, //是否自动播放，否为false,移动端不能生效
-			volume: 0.6, //初始音量（0~1）
-			lrcType: 3, //歌词模式（1、HTML模式 2、js模式 3、lrc文件模式）
-			mutex: true, //互斥模式：阻止多个播放器同时播放，当前播放器播放时暂停其他播放器
-			order: 'random', //音频循环顺序（'list'：顺序, 'random'：随机）
-			preload: 'auto', //预加载（'none'：不预加载, 'metadata'：元数据, 'auto'：自动）
-			listFolded: false, //列表默认折叠，开启为true
-			theme: '#ee8243', //主题颜色
-			audio: [{
-				name: '孤勇者 - 陈奕迅', //歌曲名称
-				artist: '陈奕迅', //歌曲作者
-				url: '../music/孤勇者 - 陈奕迅.mp3', //歌曲源文件地址
-				cover: '../music/cover.jpg', //歌曲封面地址
-				lrc: '../music/孤勇者.lrc', //歌曲的歌词文件
-				theme: '#eeeeee' //主题颜色（优先）
-			}]
-		});
-	</script>
-	<div class="container" style="height:112.8px;"><canvas class="illo" width="120" height="120"
-		style="max-width:100px;max-height:112.8px;touch-action:none;"></canvas>
-
-	<script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/zdog.dist.js"></script>
-	<script id="rendered-js" src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/twopeople.js"></script>
-	</div>
-	<style>
+		<style>
 
 
-	</style>
+		</style>
 
-</body>
+	</body>
 
 </html>
