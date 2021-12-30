@@ -1,12 +1,14 @@
 # 双城之战
 
+## githubpage
+
+https://tianwen42.github.io/web-design/
+
 ## kico响应式前端框架。
 
 ## 阿里矢量图标
 
 ## 鼠标以及点击特效
-
-## css响应式布局
 
 ## Badge
 
@@ -34,10 +36,6 @@ alipay
 
 > https://badg.vercel.app/badge/icon/alipay/red?icon=alipay&label
 
-
-
-\HTML5\03-阶段三（Javascript）\day50-swiper
-
 ## 图像轮播
 
 ## 音乐播放
@@ -45,4 +43,16 @@ alipay
 Aplayer音乐播放器
 
 ## b站视频
+
+## 雪花特效
+
+## 旋转特效
+
+## css响应式布局
+
+
+
+## ajax异步技术
+
+实现局部刷新，减小负载
 
