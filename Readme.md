@@ -2,7 +2,7 @@
 
 可以点击查看效果
 
-https://tianwen42.github.io/web-design/
+[https://tianwen42.github.io/web-design/](https://tianwen42.github.io/web-curriculum-design/)
 
 ## kico响应式前端框架。
 
