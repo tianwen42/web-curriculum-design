@@ -1,0 +1,126 @@
+/* 模式切换基础变量 */
+:root {
+    --bg-color: transparent;
+    --text-color: #666;
+    --h-text-shadow: 0.02em 0.02em 0.05em #999999;
+    --box-bg: transparent;
+    --footer-bg: transparent;
+    --nav-a-color: #333;
+    --nav-a-hover-bg: #eee;
+    --story-box-bg: #eee;
+    --nav-li-bg: #fff;
+}
+
+/* 夜晚模式变量覆盖 */
+[data-theme='dark'] {
+    --text-color: #ccc;
+    --h-text-shadow: 0.02em 0.02em 0.05em #000;
+    --nav-a-color: #bbb;
+    --nav-a-hover-bg: #333;
+    --story-box-bg: #333;
+    --nav-li-bg: #222;
+}
+
+/* 切换按钮样式 */
+.theme-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 999999;
+    cursor: pointer;
+    width: 40px;
+    height: 40px;
+    background: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    border: none;
+    font-size: 20px;
+}
+
+[data-theme='dark'] .theme-toggle {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 2px 10px rgba(255,255,255,0.1);
+}
+
+.theme-toggle:hover {
+    transform: scale(1.1);
+}
+
+/* 应用变量到全局样式 */
+body {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* 导航项适配 */
+[data-theme='dark']::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: -1;
+    pointer-events: none;
+}
+
+/* 导航项适配 */
+#nav ul li {
+    background: transparent !important; /* 移除容器背景 */
+}
+
+#nav ul li a {
+    background: var(--nav-li-bg) !important; /* 将背景应用到圆形链接上 */
+    color: var(--nav-a-color) !important;
+    transition: all 0.3s ease;
+}
+
+#nav ul li a:hover {
+    background: var(--nav-a-hover-bg) !important;
+}
+
+/* 故事板块与底部区域适配 */
+.story-box, #main {
+    background-color: var(--story-box-bg) !important;
+    border-radius: 40px !important; /* 确保圆角在切换模式时依然生效 */
+    transition: all 0.3s ease;
+}
+
+.moredetail {
+    background: transparent !important; /* 彻底移除父级背景，消除矩形块感 */
+    border: none !important;
+}
+
+#logo div {
+    background-color: transparent !important; /* 彻底移除标题背景窗口感 */
+}
+
+.story, #logo div, body > h1, .other h1, .footer, .footer span, .footer p {
+    color: var(--text-color) !important;
+}
+
+.footer {
+    background: var(--footer-bg) !important;
+    transition: background 0.3s ease;
+}
+
+/* 提高暗黑模式下的对比度 (仅针对故事板块和页脚) */
+[data-theme='dark'] {
+    --text-color: #ffffff; 
+    --story-box-bg: #1a1a1a; 
+    --footer-bg: linear-gradient(120deg, #0f0c29 0%, #302b63 50%, #24243e 100%) !important;
+}
+
+:root {
+    --footer-bg: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+    --story-box-bg: #eee;
+}
+
+[data-theme='dark'] .story {
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.9) !important;
+}
+
