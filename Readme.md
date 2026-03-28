@@ -1,4 +1,4 @@
-# 🌐 双城之战 (Arcane) - 网页设计
+﻿# 🌐 双城之战 (Arcane) - 网页设计
 
 [![Website](https://img.shields.io/badge/Website-Visit-blue?style=for-the-badge&logo=google-chrome)](https://tianwen42.github.io/web-curriculum-design/)
 [![GitHub](https://img.shields.io/badge/GitHub-Repository-black?style=for-the-badge&logo=github)](https://github.com/tianwen42/web-curriculum-design)
@@ -32,15 +32,35 @@
 
 | 首页预览 | 视频详情 |
 | :---: | :---: |
-| ![首页](screenshot/4.png) | ![视频](screenshot/1.png) |
+| ![首页](assets/screenshots/4.png) | ![视频](assets/screenshots/1.png) |
 
 | 音乐播放 | 雪花特效 |
 | :---: | :---: |
-| ![音乐](screenshot/3.png) | ![雪花](screenshot/6.png) |
+| ![音乐](assets/screenshots/3.png) | ![雪花](assets/screenshots/6.png) |
 
 | 旋转特效 | AJAX 加载 |
 | :---: | :---: |
-| ![旋转](screenshot/2.png) | ![AJAX](screenshot/5.png) |
+| ![旋转](assets/screenshots/2.png) | ![AJAX](assets/screenshots/5.png) |
+
+---
+
+## 📂 目录结构
+
+```text
+/
+├── assets/             # 静态资源
+│   ├── css/            # 样式文件
+│   ├── js/             # 脚本文件
+│   ├── images/         # 图片资源
+│   ├── music/          # 音乐与歌词
+│   └── screenshots/    # 项目截图
+├── pages/              # 页面文件
+│   ├── characters/     # 角色详情页 (AJAX 加载)
+│   └── main.html       # 核心展示页
+├── index.html          # 入口页面
+├── README.md           # 项目说明
+└── LICENSE             # 开源协议
+```
 
 ---
 
