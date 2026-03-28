@@ -4,30 +4,13 @@ function siteTime() {
 	var minutes = seconds * 60;
 	var hours = minutes * 60;
 	var days = hours * 24;
-	var years = days * 365;
-	var today = new Date();
-	var startYear = "2021";
-	var startMonth = "1";
-	var startDate = "1";
-	var startHour = "0";
-	var startMinute = "0";
-	var startSecond = "0";
-	var todayYear = today.getFullYear();
-	var todayMonth = today.getMonth() + 1;
-	var todayDate = today.getDate();
-	var todayHour = today.getHours();
-	var todayMinute = today.getMinutes();
-	var todaySecond = today.getSeconds();
-	var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
-	var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
-	var diff = t2 - t1;
-	var diffYears = Math.floor(diff / years);
-	var diffDays = Math.floor((diff / days) - diffYears * 365);
-	var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
-	var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
-		minutes);
-	var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
-		diffMinutes * minutes) / seconds);
+	var now = new Date();
+	var start = new Date(2020, 5, 27, 0, 0, 0);
+	var diff = now.getTime() - start.getTime();
+	var diffDays = Math.floor(diff / days);
+	var diffHours = Math.floor((diff % days) / hours);
+	var diffMinutes = Math.floor((diff % hours) / minutes);
+	var diffSeconds = Math.floor((diff % minutes) / seconds);
 
 	document.getElementById("sitetime").innerHTML = "小破站已运行 " + diffDays + " 天 " + diffHours +
 		" 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
