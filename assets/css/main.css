@@ -2,7 +2,7 @@
 /*设置背景*/
 body{
     overflow: hidden;
-	background: url(../images/bg.jpg);
+	background: url(../images/background.jpg);
 	background-size: cover;
 	background-attachment: fixed;
 	background-position: center;
@@ -65,7 +65,7 @@ div .enter_word{
 	width: 7em;
 }
 
-/*主页面*/
+/*主页�?/
 .main-intro{
 	display: flex;
 	justify-content: center;
@@ -99,7 +99,7 @@ p.paragraph{
 	text-indent:2em;
 }
 
-/*导航栏*/
+/*导航�?/
 .head-bg{
 	position: fixed;
 	width: 100%;
@@ -189,7 +189,7 @@ p.paragraph{
 	background: #FFFFFF;
 	padding: 10px 0px;
 }
-/*响应式*/
+/*响应�?/
 @media screen and (max-width: 900px){
 	.head-bg .logo{
 		margin: 0 auto;

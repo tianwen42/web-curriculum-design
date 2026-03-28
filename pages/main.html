@@ -5,13 +5,13 @@
 		<title>金克丝</title>
 		<meta name="keywords" content="" />
 		<meta name="description" content="" />
-		<link href="../css/style.css" rel="stylesheet" type="text/css" />
-		<link href="../css/kico.css?v=20260328g" rel="stylesheet" type="text/css" />
-		<script type="text/javascript" src="../js/jquery.min.js"></script>
-		<script type="text/javascript" src="../js/js.js?v=20260328h"></script>
+		<link href="../assets/css/style.css" rel="stylesheet" type="text/css" />
+		<link href="../assets/css/kico.css?v=20260328g" rel="stylesheet" type="text/css" />
+		<script type="text/javascript" src="../assets/js/jquery.min.js"></script>
+		<script type="text/javascript" src="../assets/js/js.js?v=20260328h"></script>
 
-		<link rel="stylesheet" href="../js/APlayer.min.css"> <!-- Aplayer组件 -->
-		<script src="../js/kico.js?v=20260328g"></script> <!-- kico框架 -->
+		<link rel="stylesheet" href="../assets/css/APlayer.min.css"> <!-- Aplayer组件 -->
+		<script src="../assets/js/kico.js?v=20260328g"></script> <!-- kico框架 -->
 		<!-- 图片点击 -->
 		<script>
 			$(document).ready(function() {
@@ -39,7 +39,7 @@
 						ks.image(".zoomimg");
 					}
 				}
-				xmlhttp.open("GET", ID + ".html", true);
+				xmlhttp.open("GET", "characters/" + ID + ".html", true);
 				xmlhttp.send();
 
 			}
@@ -49,10 +49,12 @@
 
 	<body>
 		<h1>
-			预告
+			主题曲 MV
 		</h1>
-		<div class="MV">
-			<video src="https://qiniu.tianwen42.top/FilingAndSorting/webdesign/vedio/MV2.mp4" controls></video>
+		<div class="MV" style="text-align: center; margin: 20px auto; max-width: 800px;">
+			<iframe src="//player.bilibili.com/player.html?bvid=BV1wq4y1R7DC&page=1&high_quality=1&danmaku=0" 
+				allowfullscreen="allowfullscreen" width="100%" height="450" scrolling="no" frameborder="0" sandbox="allow-top-navigation allow-same-origin allow-forms allow-scripts">
+			</iframe>
 		</div>
 
 		<div id="banner">
@@ -107,16 +109,16 @@
 
 					<div class="row thin">
 						<div class="col-m-6">
-							<img class="zoomimg" src="../images/jincx.jpg" alt="金克丝" bk-image="active">
+							<img class="zoomimg" src="../assets/images/jincx.jpg" alt="金克丝" bk-image="active">
 						</div>
 						<div class="col-m-6">
-							<img class="zoomimg" src="../images/jincx2.jpg" alt="金克丝" bk-image="active">
+							<img class="zoomimg" src="../assets/images/jincx2.jpg" alt="金克丝" bk-image="active">
 						</div>
 						<div class="col-m-6">
-							<img class="zoomimg" src="../images/jincx3.jpg" alt="金克丝" bk-image="active">
+							<img class="zoomimg" src="../assets/images/jincx3.jpg" alt="金克丝" bk-image="active">
 						</div>
 						<div class="col-m-6">
-							<img class="zoomimg" src="../images/jincx4.jpg" alt="金克丝" bk-image="active">
+							<img class="zoomimg" src="../assets/images/jincx4.jpg" alt="金克丝" bk-image="active">
 						</div>
 					</div>
 				</div>
@@ -191,7 +193,7 @@
 			clikOn()
 		</script>
 		<div id="aplayer"></div>
-		<script src="../js/APlayer.min.js"></script>
+		<script src="../assets/js/APlayer.min.js"></script>
 		<script>
 			const ap = new APlayer({
 				container: document.getElementById('aplayer'),
@@ -207,9 +209,9 @@
 				audio: [{
 					name: '孤勇者 - 陈奕迅', //歌曲名称
 					artist: '陈奕迅', //歌曲作者
-					url: '../music/孤勇者 - 陈奕迅.mp3', //歌曲源文件地址
-					cover: '../music/cover.jpg', //歌曲封面地址
-					lrc: '../music/孤勇者.lrc', //歌曲的歌词文件
+					url: '../assets/music/孤勇者 - 陈奕迅.mp3', //歌曲源文件地址
+					cover: '../assets/music/cover.jpg', //歌曲封面地址
+					lrc: '../assets/music/孤勇者.lrc', //歌曲的歌词文件
 					theme: '#eeeeee' //主题颜色（优先）
 				}]
 			});
